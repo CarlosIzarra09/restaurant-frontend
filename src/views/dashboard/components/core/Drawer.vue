@@ -6,7 +6,7 @@
     :expand-on-hover="expandOnHover"
     :right="$vuetify.rtl"
     :src="barImage"
-    mobile-break-point="960"
+    mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
@@ -84,7 +84,7 @@
     <template v-slot:append>
       <base-item
         :item="{
-          title: $t('Cerrar Sesión'),
+          title: 'Cerrar Sesión',
           icon: 'mdi-logout',
           to: '/upgrade',
         }"
@@ -119,7 +119,7 @@
         {
           icon: 'mdi-receipt',
           title: 'Caja D Sonia',
-          to: '/g',
+          to: '/pages/cart',
         },
         {
           icon: 'mdi-history',
@@ -205,7 +205,7 @@
         return {
           ...item,
           children: item.children ? item.children.map(this.mapItem) : undefined,
-          title: this.$t(item.title),
+          title: item.title,
         }
       },
     },

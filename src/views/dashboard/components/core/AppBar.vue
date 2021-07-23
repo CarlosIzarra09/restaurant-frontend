@@ -30,7 +30,7 @@
 
     <v-spacer />
 
-    <v-text-field
+    <!-- <v-text-field
       :label="$t('search')"
       color="secondary"
       hide-details
@@ -49,20 +49,20 @@
           <v-icon>mdi-magnify</v-icon>
         </v-btn>
       </template>
-    </v-text-field>
+    </v-text-field> -->
 
     <div class="mx-3" />
 
-    <v-btn
+    <!-- <v-btn
       class="ml-2"
       min-width="0"
       text
       to="/"
     >
       <v-icon>mdi-view-dashboard</v-icon>
-    </v-btn>
+    </v-btn> -->
 
-    <v-menu
+    <!-- <v-menu
       bottom
       left
       offset-y
@@ -104,16 +104,19 @@
           </app-bar-item>
         </div>
       </v-list>
-    </v-menu>
-
-    <v-btn
+    </v-menu> -->
+    
+    <h4 class="display-1 primary--text">Administrador D' Sonia</h4>
+    <v-icon class="ml-2 primary--text" size="30px">mdi-account-circle</v-icon>
+    <!-- <v-btn
       class="ml-2"
       min-width="0"
       text
       to="/pages/user"
     >
+      <h2>Hola</h2>
       <v-icon>mdi-account</v-icon>
-    </v-btn>
+    </v-btn> -->
   </v-app-bar>
 </template>
 
@@ -153,12 +156,7 @@
       },
     },
 
-    props: {
-      value: {
-        type: Boolean,
-        default: false,
-      },
-    },
+    
 
     data: () => ({
       notifications: [
@@ -168,13 +166,15 @@
         'Another Notification',
         'Another one',
       ],
+      value: {
+        type: Boolean,
+        default: false,
+      },
     }),
 
     computed: {
       ...mapState(['drawer']),
-      updateIcon(){
-        this.value = !this.value;
-      }
+      
     },
 
     methods: {
@@ -184,7 +184,8 @@
 
       closeDialog(){
         this.setDrawer(!this.drawer);
-        this.updateIcon();
+        //this.updateIcon();
+        this.value = !this.value;
       },
     },
   }

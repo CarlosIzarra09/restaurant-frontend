@@ -17,6 +17,11 @@ export default new Router({
           path: '',
           component: () => import('@/views/dashboard/Dashboard'),
         },
+        {
+          name: 'Cart',
+          path: 'pages/cart',
+          component:()=>import('@/views/dashboard/pages/Cart')
+        },
         // Pages
         {
           name: 'User Profile',
